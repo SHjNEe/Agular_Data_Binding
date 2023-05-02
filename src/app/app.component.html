@@ -7,5 +7,16 @@
     </div>
   </div>
   <p appBasicHighlight [appHighlight]="'yellow'">Style me with directive</p>
-  <p appBetterHighlight >Style me with better directive</p>
+  <p [appBetterHighlight]="'green'" >Style me with better directive</p>
+  <div *appUnless="false" >
+    <h1>Style me with better directive</h1>
+  </div>
+  <div [ngSwitch]="number">
+    <p *ngSwitchCase="1">Case 1</p>
+    <p *ngSwitchCase="2">Case 2</p>
+    <p *ngSwitchCase="3">Case 3</p>
+    <p *ngSwitchDefault>Case 4</p>
+  </div>
+
 </div>
+
